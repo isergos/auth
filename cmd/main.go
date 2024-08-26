@@ -19,7 +19,7 @@ type server struct {
 	desc.UnimplementedAuthV1Server
 }
 
-func (s *server) Create(ctc context.Context, req *desc.CreateRequest) (*desc.CreateResponse, error) {
+func (s *server) Create(ctx context.Context, req *desc.CreateRequest) (*desc.CreateResponse, error) {
 	log.Printf("user info: %v", req.GetUserInfo())
 
 	return &desc.CreateResponse{Id: 3}, nil
